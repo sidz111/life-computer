@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TechZone Laptops | Admin Dashboard</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/admin-dashboard.css" />
+  </head>
+  <body class="admin-page">
+    <header class="admin-topbar">
+      <div class="admin-brand">
+        <strong>TECH<span>ZONE</span></strong
+        ><small>ADMIN CONSOLE</small>
+      </div>
+      <button
+        class="admin-menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+      >
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="admin-user">
+        <i class="fa fa-user-circle"></i><span>Alex Morgan</span
+        ><a href="index.html">View store</a>
+      </div>
+    </header>
+    <div class="admin-shell">
+      <aside class="admin-sidebar">
+        <nav aria-label="Admin navigation">
+          <a class="active" href="admin-dashboard.html"
+            ><i class="fa fa-dashboard"></i>Overview</a
+          >
+          <a href="#orders"
+            ><i class="fa fa-shopping-bag"></i>Orders <b>12</b></a
+          >
+          <a href="#inventory"><i class="fa fa-laptop"></i>Inventory</a>
+          <a href="#customers"><i class="fa fa-users"></i>Customers</a>
+          <a href="#settings"><i class="fa fa-cog"></i>Settings</a>
+        </nav>
+        <div class="support-note">
+          <i class="fa fa-life-ring"></i><strong>Need a hand?</strong
+          ><span>Support is online</span
+          ><a href="contact.html">Contact support</a>
+        </div>
+      </aside>
+      <main class="admin-main">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">MONDAY, 03 SEPTEMBER 2026</span>
+            <h1>Good morning, Alex</h1>
+            <p>Here is what is happening with your store today.</p>
+          </div>
+          <a class="btn btn-primary" href="category.html"
+            ><i class="fa fa-plus"></i> Add product</a
+          >
+        </div>
+        <section class="stat-grid" aria-label="Store overview">
+          <article class="stat-card sales">
+            <span class="stat-icon"><i class="fa fa-line-chart"></i></span
+            ><span class="stat-label">Total sales</span><strong>$84,290</strong
+            ><small><b>+12.8%</b> vs last month</small>
+          </article>
+          <article class="stat-card orders">
+            <span class="stat-icon"><i class="fa fa-shopping-cart"></i></span
+            ><span class="stat-label">Total orders</span><strong>1,248</strong
+            ><small><b>+8.4%</b> vs last month</small>
+          </article>
+          <article class="stat-card products">
+            <span class="stat-icon"><i class="fa fa-cubes"></i></span
+            ><span class="stat-label">Products sold</span><strong>3,672</strong
+            ><small><b>+15.2%</b> vs last month</small>
+          </article>
+          <article class="stat-card alerts">
+            <span class="stat-icon"
+              ><i class="fa fa-exclamation-triangle"></i></span
+            ><span class="stat-label">Low stock alerts</span><strong>08</strong
+            ><small><a href="#inventory">Review inventory</a></small>
+          </article>
+        </section>
+        <section class="quick-actions" aria-label="Quick actions">
+          <h2>Quick actions</h2>
+          <div class="action-grid">
+            <a href="category.html"
+              ><i class="fa fa-plus-circle"></i><span>Add new laptop</span
+              ><small>List a product</small></a
+            ><a href="#inventory"
+              ><i class="fa fa-archive"></i><span>Manage inventory</span
+              ><small>Update stock levels</small></a
+            ><a href="#customers"
+              ><i class="fa fa-user-plus"></i><span>View customers</span
+              ><small>1,820 total customers</small></a
+            >
+          </div>
+        </section>
+        <section class="orders-panel" id="orders">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">LIVE ACTIVITY</span>
+              <h2>Recent orders</h2>
+            </div>
+            <select id="order-filter" aria-label="Filter orders">
+              <option value="all">All orders</option>
+              <option value="Pending">Pending</option>
+              <option value="Shipped">Shipped</option>
+              <option value="Delivered">Delivered</option>
+            </select>
+          </div>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Customer</th>
+                  <th>Product</th>
+                  <th>Date</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="Pending">
+                  <td><strong>#TZ-1048</strong></td>
+                  <td>Riya Shah</td>
+                  <td>Velocity Pro 16</td>
+                  <td>03 Sep 2026</td>
+                  <td>$1,899</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr data-status="Shipped">
+                  <td><strong>#TZ-1047</strong></td>
+                  <td>Daniel Kim</td>
+                  <td>ZenBook Air 14</td>
+                  <td>02 Sep 2026</td>
+                  <td>$1,249</td>
+                  <td><span class="status shipped">Shipped</span></td>
+                </tr>
+                <tr data-status="Delivered">
+                  <td><strong>#TZ-1046</strong></td>
+                  <td>Maya Patel</td>
+                  <td>RTX Studio X1</td>
+                  <td>02 Sep 2026</td>
+                  <td>$2,499</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                </tr>
+                <tr data-status="Shipped">
+                  <td><strong>#TZ-1045</strong></td>
+                  <td>Owen Brooks</td>
+                  <td>Mechanical K2 Bundle</td>
+                  <td>01 Sep 2026</td>
+                  <td>$189</td>
+                  <td><span class="status shipped">Shipped</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="assets/js/admin-dashboard.js"></script>
+  </body>
+</html>
