@@ -160,6 +160,113 @@ body.cnt-home a:focus {
     background: var(--tz-blue-dark);
 }
 
+.hero {
+    background: #17364c;
+    color: #fff;
+    min-height: 375px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero::after {
+    background: linear-gradient(90deg, rgba(23, 54, 76, .92), rgba(23, 54, 76, .63) 45%, rgba(23, 54, 76, .05));
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.hero-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 62%;
+}
+
+.hero-content {
+    padding: 76px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 48px;
+    line-height: 1.05;
+    margin: 14px 0;
+    max-width: 530px;
+}
+
+.hero p {
+    color: #d8e6ed;
+    font-size: 19px;
+    margin: 0 0 25px;
+    max-width: 450px;
+}
+
+.category-rail {
+    background: #fff;
+    border-bottom: 1px solid var(--tz-line);
+    border-top: 1px solid var(--tz-line);
+    padding: 12px 0;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0;
+}
+
+.category-list li {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.category-list a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 18px;
+}
+
+.category-list i {
+    color: var(--tz-blue);
+    font-size: 23px;
+}
+
+.category-list span {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.section {
+    padding: 42px 0 18px;
+}
+
+.section-heading {
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    margin: 0;
+}
+
+.section-heading p {
+    color: var(--tz-muted);
+    margin: 5px 0 0;
+}
+
 body.techzone-page .site-header .main-nav a:hover,
 body.techzone-page .site-header .main-nav a:focus {
     background: inherit;
@@ -465,6 +572,27 @@ body.cnt-home .footer h4 {
 }
 
 @media (max-width: 767px) {
+    .hero {
+        min-height: 440px;
+    }
+
+    .hero-image {
+        opacity: .42;
+        width: 100%;
+    }
+
+    .hero::after {
+        background: rgba(23, 54, 76, .75);
+    }
+
+    .hero-content {
+        padding: 68px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
     .site-header .utility-bar .container {
         align-items: center;
         flex-direction: column;
@@ -527,6 +655,10 @@ body.cnt-home .footer h4 {
 }
 
 @media (max-width: 420px) {
+    .hero h1 {
+        font-size: 33px;
+    }
+
     .site-header .header-action span {
         display: none;
     }
@@ -679,6 +811,41 @@ body.cnt-home .footer h4 {
     margin: 0 0 12px;
 }
 
+.trust-section {
+    background: #fff;
+    border-bottom: 1px solid var(--tz-line);
+    border-top: 1px solid var(--tz-line);
+    padding: 24px 0;
+}
+
+.trust-item {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    min-height: 52px;
+}
+
+.trust-item i {
+    color: var(--tz-blue);
+    font-size: 24px;
+    width: 28px;
+}
+
+.trust-item strong,
+.trust-item span {
+    display: block;
+}
+
+.trust-item strong {
+    font-size: 16px;
+}
+
+.trust-item span {
+    color: var(--tz-muted);
+    font-size: 13px;
+    margin-top: 3px;
+}
+
 .price {
     color: var(--tz-blue);
     font-size: 20px;
@@ -746,4 +913,10 @@ body.cnt-home .footer h4 {
     .tech-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.tech-card .button-secondary {
+    margin-top: 14px;
+    text-align: center;
+    width: 100%;
 }
