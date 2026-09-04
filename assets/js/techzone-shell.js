@@ -8,7 +8,7 @@
     '<div class="col-sm-6 col-xs-12"><form class="search-form" id="search-form"><input id="search-input" type="search" placeholder="Search laptops, GPUs, monitors..." aria-label="Search products"><button type="submit" aria-label="Search"><i class="fa fa-search"></i></button></form></div>' +
     '<div class="col-sm-3 col-xs-12"><div class="header-actions"><a class="header-action" href="sign-in.html"><i class="fa fa-user-o"></i><span>Account</span></a><a class="header-action" href="shopping-cart.html"><i class="fa fa-shopping-bag"></i><b class="cart-count">2</b><span>Cart</span></a></div></div>' +
     "</div></div></div>" +
-    '<nav class="main-nav"><div class="container"><a href="index.html">Home</a><a href="#deals">Special offers</a><a href="#products">All products</a><a href="category.html">Gaming</a><a href="category.html">Business</a><a href="contact.html">Contact</a></div></nav>' +
+    '<nav class="main-nav"><div class="container"><a href="index.html">Home</a><a href="#deals">Special offers</a><a href="#products">All products</a><a href="contact.html">Contact</a></div></nav>' +
     "</header>";
 
   var footer =
