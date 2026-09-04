@@ -30,6 +30,12 @@ body.cnt-home a:focus {
     border-bottom: 1px solid var(--tz-line);
 }
 
+.site-header .main-header,
+.site-header .main-header .container,
+.site-header .main-header .row {
+    background: #fff;
+}
+
 .site-header .utility-bar {
     background: var(--tz-ink);
     color: #d9e2e9;
@@ -152,6 +158,31 @@ body.cnt-home a:focus {
 
 .site-header .main-nav a:first-child {
     background: var(--tz-blue-dark);
+}
+
+body.techzone-page .site-header .main-nav a:hover,
+body.techzone-page .site-header .main-nav a:focus {
+    background: inherit;
+    color: #fff;
+}
+
+body.techzone-page .site-header .main-nav a:first-child:hover,
+body.techzone-page .site-header .main-nav a:first-child:focus {
+    background: var(--tz-blue-dark);
+}
+
+body.techzone-page .rht-col {
+    float: none;
+    width: 100%;
+}
+
+body.techzone-page .sidebar,
+body.techzone-page .side-menu,
+body.techzone-page .sidebar-module-container,
+body.techzone-page .sidebar-filter,
+body.techzone-page #brands-carousel,
+body.techzone-page .category-carousel {
+    display: none !important;
 }
 
 .site-footer {

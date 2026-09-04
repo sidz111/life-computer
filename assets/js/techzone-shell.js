@@ -41,6 +41,44 @@
     if (bodyContent) {
       bodyContent.classList.add("main-content");
     }
+    var legacySelectors = [
+      ".sidebar",
+      ".side-menu",
+      ".sidebar-module-container",
+      ".sidebar-filter",
+      "#brands-carousel",
+      ".category-carousel",
+    ];
+    for (
+      var selectorIndex = 0;
+      selectorIndex < legacySelectors.length;
+      selectorIndex += 1
+    ) {
+      var legacyElements = document.querySelectorAll(
+        legacySelectors[selectorIndex],
+      );
+      for (
+        var elementIndex = 0;
+        elementIndex < legacyElements.length;
+        elementIndex += 1
+      ) {
+        legacyElements[elementIndex].parentNode.removeChild(
+          legacyElements[elementIndex],
+        );
+      }
+    }
+    var productColumns = document.querySelectorAll(".rht-col");
+    for (
+      var productIndex = 0;
+      productIndex < productColumns.length;
+      productIndex += 1
+    ) {
+      productColumns[productIndex].className = productColumns[
+        productIndex
+      ].className
+        .replace(/\bcol-md-9\b/g, "col-md-12")
+        .replace(/\bcol-sm-9\b/g, "col-sm-12");
+    }
     document.body.classList.add("techzone-page");
   }
 
