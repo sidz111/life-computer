@@ -3,163 +3,159 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TechZone Laptops | Admin Dashboard</title>
+    <title>Admin Dashboard | TechZone</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/font-awesome.css" />
     <link rel="stylesheet" href="assets/css/techzone-pages.css" />
     <link rel="stylesheet" href="assets/css/admin-dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="admin-page">
-    <header class="admin-topbar">
-      <div class="admin-brand">
-        <strong>TECH<span>ZONE</span></strong
-        ><small>ADMIN CONSOLE</small>
-      </div>
-      <button
-        class="admin-menu-toggle"
-        type="button"
-        aria-label="Toggle navigation"
-      >
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="admin-user">
-        <i class="fa fa-user-circle"></i><span>Alex Morgan</span
-        ><a href="index.html">View store</a>
-      </div>
-    </header>
-    <div class="admin-shell">
-      <aside class="admin-sidebar">
-        <nav aria-label="Admin navigation">
-          <a class="active" href="admin-dashboard.html"
-            ><i class="fa fa-dashboard"></i>Overview</a
+    <header class="site-header">
+      <div class="utility-bar">
+        <div class="container">
+          <span>Free delivery on orders over $500</span
+          ><span class="utility-links"
+            ><a href="track-orders.html">Track order</a
+            ><a href="contact.html">Support</a></span
           >
-          <a href="#orders"
-            ><i class="fa fa-shopping-bag"></i>Orders <b>12</b></a
-          >
-          <a href="#inventory"><i class="fa fa-laptop"></i>Inventory</a>
-          <a href="#customers"><i class="fa fa-users"></i>Customers</a>
-          <a href="#settings"><i class="fa fa-cog"></i>Settings</a>
-        </nav>
-        <div class="support-note">
-          <i class="fa fa-life-ring"></i><strong>Need a hand?</strong
-          ><span>Support is online</span
-          ><a href="contact.html">Contact support</a>
         </div>
-      </aside>
-      <main class="admin-main">
-        <div class="page-heading">
-          <div>
-            <span class="eyebrow">MONDAY, 03 SEPTEMBER 2026</span>
-            <h1>Good morning, Alex</h1>
-            <p>Here is what is happening with your store today.</p>
+      </div>
+      <div class="main-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3 col-xs-12">
+              <a class="brand" href="index.html"
+                ><strong>TECH<span>ZONE</span></strong
+                ><small>LAPTOPS &amp; COMPUTING</small></a
+              >
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <form class="search-form" id="search-form">
+                <input
+                  id="search-input"
+                  type="search"
+                  placeholder="Search laptops, GPUs, monitors..."
+                  aria-label="Search products"
+                /><button type="submit" aria-label="Search">
+                  <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+            <div class="col-sm-3 col-xs-12">
+              <div class="header-actions">
+                <a class="header-action" href="sign-in.html"
+                  ><i class="fa fa-user-o"></i><span>Account</span></a
+                ><a class="header-action" href="shopping-cart.html"
+                  ><i class="fa fa-shopping-bag"></i><b class="cart-count">2</b
+                  ><span>Cart</span></a
+                >
+              </div>
+            </div>
           </div>
-          <a class="btn btn-primary" href="category.html"
-            ><i class="fa fa-plus"></i> Add product</a
-          >
         </div>
-        <section class="stat-grid" aria-label="Store overview">
-          <article class="stat-card sales">
-            <span class="stat-icon"><i class="fa fa-line-chart"></i></span
-            ><span class="stat-label">Total sales</span><strong>$84,290</strong
-            ><small><b>+12.8%</b> vs last month</small>
+      </div>
+      <nav class="main-nav">
+        <div class="container">
+          <a href="index.html">Home</a
+          ><a href="index.html#deals">Special offers</a
+          ><a href="index.html#products">All products</a
+          ><a href="category.html">Gaming</a><a href="category.html">Business</a
+          ><a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <div class="container">
+        <div class="page-heading">
+          <h1>Store dashboard</h1>
+          <p>Monitor orders, products and customer activity.</p>
+        </div>
+        <div class="tech-grid">
+          <article class="tech-card">
+            <h3>Total sales</h3>
+            <p class="price">$84,290</p>
+            <p>+12.8% this month</p>
           </article>
-          <article class="stat-card orders">
-            <span class="stat-icon"><i class="fa fa-shopping-cart"></i></span
-            ><span class="stat-label">Total orders</span><strong>1,248</strong
-            ><small><b>+8.4%</b> vs last month</small>
+          <article class="tech-card">
+            <h3>Total orders</h3>
+            <p class="price">1,248</p>
+            <p>+8.4% this month</p>
           </article>
-          <article class="stat-card products">
-            <span class="stat-icon"><i class="fa fa-cubes"></i></span
-            ><span class="stat-label">Products sold</span><strong>3,672</strong
-            ><small><b>+15.2%</b> vs last month</small>
+          <article class="tech-card">
+            <h3>Products sold</h3>
+            <p class="price">3,672</p>
+            <p>+15.2% this month</p>
           </article>
-          <article class="stat-card alerts">
-            <span class="stat-icon"
-              ><i class="fa fa-exclamation-triangle"></i></span
-            ><span class="stat-label">Low stock alerts</span><strong>08</strong
-            ><small><a href="#inventory">Review inventory</a></small>
+          <article class="tech-card">
+            <h3>Low stock alerts</h3>
+            <p class="price">08</p>
+            <p>Review inventory</p>
           </article>
-        </section>
-        <section class="quick-actions" aria-label="Quick actions">
-          <h2>Quick actions</h2>
-          <div class="action-grid">
-            <a href="category.html"
-              ><i class="fa fa-plus-circle"></i><span>Add new laptop</span
-              ><small>List a product</small></a
-            ><a href="#inventory"
-              ><i class="fa fa-archive"></i><span>Manage inventory</span
-              ><small>Update stock levels</small></a
-            ><a href="#customers"
-              ><i class="fa fa-user-plus"></i><span>View customers</span
-              ><small>1,820 total customers</small></a
+        </div>
+        <div class="content-panel" style="margin-top: 20px">
+          <h2>Recent orders</h2>
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Order</th>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#TZ-1048</td>
+                <td>Riya Shah</td>
+                <td>Velocity Pro 16</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <td>#TZ-1047</td>
+                <td>Daniel Kim</td>
+                <td>ZenBook Air 14</td>
+                <td>Shipped</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <a class="brand" href="index.html"
+              ><strong>TECH<span>ZONE</span></strong
+              ><small>LAPTOPS &amp; COMPUTING</small></a
             >
           </div>
-        </section>
-        <section class="orders-panel" id="orders">
-          <div class="panel-heading">
-            <div>
-              <span class="eyebrow">LIVE ACTIVITY</span>
-              <h2>Recent orders</h2>
-            </div>
-            <select id="order-filter" aria-label="Filter orders">
-              <option value="all">All orders</option>
-              <option value="Pending">Pending</option>
-              <option value="Shipped">Shipped</option>
-              <option value="Delivered">Delivered</option>
-            </select>
+          <div class="col-sm-4 footer-links">
+            <h3>Store</h3>
+            <a href="category.html">Shop laptops</a
+            ><a href="my-wishlist.html">Wishlist</a
+            ><a href="track-orders.html">Track an order</a>
           </div>
-          <div class="table-responsive">
-            <table>
-              <thead>
-                <tr>
-                  <th>Order</th>
-                  <th>Customer</th>
-                  <th>Product</th>
-                  <th>Date</th>
-                  <th>Total</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr data-status="Pending">
-                  <td><strong>#TZ-1048</strong></td>
-                  <td>Riya Shah</td>
-                  <td>Velocity Pro 16</td>
-                  <td>03 Sep 2026</td>
-                  <td>$1,899</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-                <tr data-status="Shipped">
-                  <td><strong>#TZ-1047</strong></td>
-                  <td>Daniel Kim</td>
-                  <td>ZenBook Air 14</td>
-                  <td>02 Sep 2026</td>
-                  <td>$1,249</td>
-                  <td><span class="status shipped">Shipped</span></td>
-                </tr>
-                <tr data-status="Delivered">
-                  <td><strong>#TZ-1046</strong></td>
-                  <td>Maya Patel</td>
-                  <td>RTX Studio X1</td>
-                  <td>02 Sep 2026</td>
-                  <td>$2,499</td>
-                  <td><span class="status delivered">Delivered</span></td>
-                </tr>
-                <tr data-status="Shipped">
-                  <td><strong>#TZ-1045</strong></td>
-                  <td>Owen Brooks</td>
-                  <td>Mechanical K2 Bundle</td>
-                  <td>01 Sep 2026</td>
-                  <td>$189</td>
-                  <td><span class="status shipped">Shipped</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="col-sm-4 footer-links">
+            <h3>Help</h3>
+            <a href="contact.html">Contact support</a><a href="faq.html">FAQs</a
+            ><a href="terms-conditions.html">Terms &amp; conditions</a>
           </div>
-        </section>
-      </main>
-    </div>
-    <script src="assets/js/admin-dashboard.js"></script>
+        </div>
+        <div class="footer-bottom row">
+          <div class="col-sm-7">
+            &copy; 2026 TechZone. Performance, without compromise.
+          </div>
+          <div class="col-sm-5 payments" aria-label="Accepted payment methods">
+            <i class="fa fa-cc-visa"></i><i class="fa fa-cc-mastercard"></i
+            ><i class="fa fa-cc-amex"></i><i class="fa fa-cc-paypal"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
-  <script src="assets/js/techzone-shell.js"></script>
 </html>
